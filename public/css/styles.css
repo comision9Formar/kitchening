@@ -1,3 +1,10 @@
+@font-face {
+    font-family: "Crenzo";
+    font-style: normal;
+    font-weight: normal;
+    src: url("/fonts/CRENZO.ttf") format("truetype");
+}
+
 *{
     box-sizing: border-box;
     padding: 0;
@@ -14,13 +21,15 @@ a{
 body{
     background-image: url('/images/bg-body.png');
     padding: 5px;
+    /* font-family: Crenzo; */
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 /* header */
 
 header{
-    text-align: center;
+    margin-bottom: 30px;
+    overflow: hidden;
 }
 
 header img{
@@ -32,32 +41,177 @@ header img{
 }
 
 header a.burger {
-    display: inline-block;
+    display: block;
     width: 35px;
     background-color: gray;
     color: white;
     padding: 8px;
     border-radius: 4px;
-    margin-bottom: 30px;
+    margin: 0 auto 30px;
+    text-align: center;
+
 }
 
 header nav ul li {
     width: 100%;
     background-color: #63645d;
     margin-bottom: 1px;
+    padding: 10px;
+    text-align: center;
+
 }
 
 header nav ul li a{
     display: inline-block;
     color: white;
     text-transform: uppercase;
-    padding: 10px;
 }
 
 /* main */
 
-.banner{
+.banner img{
     display: none;
 }
 
+article{
+    width: 100%;
+}
+
+article .image-container{
+   position: relative;
+}
+
+article .image-container img.photo{
+    width: 100%;
+}
+
+article .image-container img.label{
+    position: absolute;
+    top: 0;
+    right: 10px;
+}
+
+article .image-container a.zoom{
+    width: 100%;
+    position: absolute;
+    top: 45%;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 8px;
+}
+article h4{
+    margin: 20px 0;
+}
+
+article a.more{
+    display: inline-block;
+    padding: 10px;
+    margin: 20px 0;
+    background-color: #63645d;
+    color: white;
+    font-weight: 600;
+}
+
 /* footer */
+
+footer{
+    text-align: center;
+}
+
+footer nav ul li {
+    width: 100%;
+    background-color: #63645d;
+    margin-bottom: 1px;
+}
+
+footer nav ul li a{
+    display: inline-block;
+    color: white;
+    text-transform: uppercase;
+    padding: 10px;
+}
+
+
+/* tablet */
+@media (min-width : 481px) {
+
+    /* header */
+    header a.burger {
+        display: none;
+    }
+
+    header nav ul li {
+        width: 15.5%;
+        margin-right: 1.4%;
+        float: left;
+        font-size: 0.53rem;
+    }
+
+    header nav ul li:last-child {
+        margin-right: 0;
+    }
+
+    /* main */
+
+    .banner img{
+        display: block;
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    section.products{
+        overflow: hidden;
+    }
+
+    article{
+        width: 49%;
+        float: left;
+        margin-right: 2%;
+    }
+
+    article:nth-child(even){
+        margin-right: 0;
+    }
+}
+
+@media (min-width:769px) {
+    header nav ul li {
+        font-size: 1rem;
+    }
+
+    article{
+        width: 32%;
+        margin-right: 2%;
+    }
+    
+    article:nth-child(even){
+        margin-right: 2%;
+    }
+    
+    article:nth-child(3n){
+        margin-right: 0;
+    }
+
+    /* footer */
+
+footer{
+    background-color: red;
+    height: 200px;
+    padding: 80px 0;
+    border-radius: 30px 30px 0 0 ;
+}
+
+footer nav ul li {
+    display: inline;
+    background-color: transparent;
+    margin-bottom: 1px;
+    border-right: 2px solid white;
+}
+
+footer nav ul li:last-child{
+    border-right: none;
+}
+}
