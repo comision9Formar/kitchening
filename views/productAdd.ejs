@@ -13,21 +13,25 @@
                         <form action="" method="POST" enctype="multipart/form-data">
                             <div class="mb-3">
                               <label for="nombre" class="form-label">Nombre</label>
-                              <input type="text" class="form-control" id="nombre" name="name">
+                              <input type="text" class="form-control <%= locals.errors && errors.name ? 'is-invalid' : locals.old && old.name ? 'is-valid' : null %>" id="nombre" name="name" value="<%= locals.old && old.name ? old.name : null %>">
+                              <span class="text-danger small"><%= locals.errors && errors.name ? errors.name.msg : null %> </span>
                             </div>
                             <div class="mb-3">
                               <label for="description" class="form-label">Descripción</label>
-                              <textarea class="form-control" id="description" name="description"></textarea>
+                              <textarea class="form-control <%= locals.errors && errors.description ? 'is-invalid' : locals.old && old.description ? 'is-valid' : null %>" id="description" name="description" style="resize: none;"><%= locals.old && old.description ? old.description : null %></textarea>
+                              <span class="text-danger small"><%= locals.errors && errors.description ? errors.description.msg : null %> </span>
                             </div>
-                            <select class="form-select" aria-label="Default select example" name="category">
-                                <option selected hidden>Seleccione la categoría</option>
+                            <select class="form-select <%= locals.errors && errors.category ? 'is-invalid' : locals.old && old.category ? 'is-valid' : null %>" aria-label="Default select example" name="category">
+                                <option selected hidden value="">Seleccione la categoría</option>
                                 <% categories.forEach(category => { %>
-                                    <option value="<%= category %>"><%= category %> </option>
+                                    <option value="<%= category %>" <%= locals.old && old.category === category ? 'selected' : null %> ><%= category %> </option>
                                 <% }) %>
                               </select>
+                              <span class="text-danger small"><%= locals.errors && errors.category ? errors.category.msg : null %> </span>
                               <div class="mb-3">
                                 <label for="image" class="form-label">Imagen</label>
-                                <input class="form-control" type="file" id="image" name="image">
+                                <input class="form-control <%= locals.errors && errors.image ? 'is-invalid' : locals.old && old.image ? 'is-valid' : null %>" type="file" id="image" name="image" multiple>
+                                <span class="text-danger small"><%= locals.errors && errors.image ? errors.image.msg : null %> </span>
                               </div>
                             <div>
                                 <button class="btn btn-primary" type="submit">Guardar</button>

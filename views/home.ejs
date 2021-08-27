@@ -12,7 +12,7 @@
             <% products.forEach(product => { %>
                 <article class="product">
                     <div class="image-container">
-                        <img class="photo" src="/images/<%= product.photo %> " alt="">
+                        <img class="photo" src="/images/products/<%= product.photos[0] %>" alt="">
                         <% if (product.category === "sale") { %>
                             <img class="label" src="/images/img-descuento.png" alt="">
                         <% }else if(product.category === "new"){ %>
