@@ -1,0 +1,44 @@
+[
+    {
+        "id" : 1,
+        "name" : "Lorem ipsum amet",
+        "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus fugit iste earum odit quidem porro aliquid?",
+        "photo" : "img-pdto-1.jpg",
+        "category" : "new"
+    },
+    {
+        "id" : 2,
+        "name" : "Lorem ipsum amet",
+        "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus fugit iste earum odit quidem porro aliquid?",
+        "photo" : "img-pdto-2.jpg",
+        "category" : "sale"
+    },
+    {
+        "id" : 3,
+        "name" : "Lorem ipsum amet",
+        "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus fugit iste earum odit quidem porro aliquid?",
+        "photo" : "img-pdto-3.jpg",
+        "category" : "free"
+    },
+    {
+        "id" : 4,
+        "name" : "Lorem ipsum amet",
+        "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus fugit iste earum odit quidem porro aliquid?",
+        "photo" : "img-pdto-1.jpg",
+        "category" : "new"
+    },
+    {
+        "id" : 5,
+        "name" : "Lorem ipsum amet",
+        "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus fugit iste earum odit quidem porro aliquid?",
+        "photo" : "img-pdto-2.jpg",
+        "category" : "sale"
+    },
+    {
+        "id" : 6,
+        "name" : "Lorem ipsum amet",
+        "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus fugit iste earum odit quidem porro aliquid?",
+        "photo" : "img-pdto-1.jpg",
+        "category" : "free"
+    }
+]

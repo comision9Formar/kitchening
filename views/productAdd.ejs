@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/head') %> 
+<body>
+    <%- include('partials/header') %> 
+
+    <main class="container">
+        <div class="row">
+            <div class="col-12 col-md-8 mx-auto mt-5">
+                <h2>Agregar producto</h2>
+                <div class="card">
+                    <div class="card-header">
+                        <form action="" method="POST" enctype="multipart/form-data">
+                            <div class="mb-3">
+                              <label for="nombre" class="form-label">Nombre</label>
+                              <input type="text" class="form-control" id="nombre" name="name">
+                            </div>
+                            <div class="mb-3">
+                              <label for="description" class="form-label">Descripción</label>
+                              <textarea class="form-control" id="description" name="description"></textarea>
+                            </div>
+                            <select class="form-select" aria-label="Default select example" name="category">
+                                <option selected hidden>Seleccione la categoría</option>
+                                <% categories.forEach(category => { %>
+                                    <option value="<%= category %>"><%= category %> </option>
+                                <% }) %>
+                              </select>
+                              <div class="mb-3">
+                                <label for="image" class="form-label">Imagen</label>
+                                <input class="form-control" type="file" id="image" name="image">
+                              </div>
+                            <div>
+                                <button class="btn btn-primary" type="submit">Guardar</button>
+                            </div>
+                          </form>
+                    </div>
+                    <div class="card-body">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+    </main>
+    <%- include('partials/footer') %> 
+    <%- include('partials/scripts') %> 
+
+</body>
+
+</html>
