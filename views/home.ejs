@@ -13,9 +13,9 @@
                 <article class="product">
                     <div class="image-container">
                         <img class="photo" src="/images/products/<%= product.photos[0] %>" alt="">
-                        <% if (product.category === "sale") { %>
+                        <% if (product.category === "oferta") { %>
                             <img class="label" src="/images/img-descuento.png" alt="">
-                        <% }else if(product.category === "new"){ %>
+                        <% }else if(product.category === "nuevo"){ %>
                             <img class="label" src="/images/img-nuevo.png" alt="">
                         <% } else { %>
                             <img class="label" src="/images/img-gratis.png" alt="">
@@ -27,7 +27,7 @@
                     <p class="description">
                         <%= product.description %> 
                     </p>
-                    <a class="more" href="">ver más</a>
+                    <a class="more" href="/products/detail/<%= product.id %>">ver más</a>
                 </article>
             <% }) %>
          

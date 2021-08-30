@@ -24,7 +24,7 @@
                             <select class="form-select <%= locals.errors && errors.category ? 'is-invalid' : locals.old && old.category ? 'is-valid' : null %>" aria-label="Default select example" name="category">
                                 <option selected hidden value="">Seleccione la categoría</option>
                                 <% categories.forEach(category => { %>
-                                    <option value="<%= category %>" <%= locals.old && old.category === category ? 'selected' : null %> ><%= category %> </option>
+                                    <option value="<%= category %>" <%= locals.old && old.category === category ? 'selected' : null %> ><%= capitalize(category) %></option>
                                 <% }) %>
                               </select>
                               <span class="text-danger small"><%= locals.errors && errors.category ? errors.category.msg : null %> </span>
