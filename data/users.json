@@ -6,5 +6,13 @@
     "pass": "$2a$10$HZs7ozq5w7cs/myN5.RUjeeMW5117jTYcXzV2QAxUMdWh/dCVnrS.",
     "rol": "user",
     "avatar": "avatar_default.png"
+  },
+  {
+    "id": 2,
+    "name": "Melisa",
+    "email": "melisa@gmail.com",
+    "pass": "$2a$10$3n4c6LEuicBSIkhNt0VkneAX/tgBn8QW58iDqZI/ZuI7ahNUdujUm",
+    "rol": "admin",
+    "avatar": "avatar_default.png"
   }
 ]

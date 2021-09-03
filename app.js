@@ -5,6 +5,7 @@ const port = 3030;
 const methodOverride = require('method-override');
 const session = require('express-session');
 const cookieParser =require('cookie-parser');
+const localsUser = require('./middlewares/localsUser');
 
 const indexRouter = require('./routes/index');
 const productsRouter = require('./routes/products');
@@ -27,6 +28,8 @@ app.use(express.urlencoded({ extended: false }));
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
+
+app.use(localsUser);
 
 app.use('/',indexRouter);
 app.use('/products',productsRouter);

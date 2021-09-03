@@ -61,9 +61,17 @@ module.exports = {
             })
         }
     },
-    profile : (req,res) => res.render('profile'),
+    profile : (req,res) => {
+        res.render('profile',{
+            user : users.find(user => user.id === +req.session.userLogin.id)
+        })
+    },
+    update : (req,res) => {
+        let errors = validationResult(req)
+        return res.send(errors)
+    },
     logout : (req,res) => {
         req.session.destroy();
-
+        return res.redirect('/')
     }
 }
