@@ -1,0 +1,10 @@
+[
+  {
+    "id": 1,
+    "name": "Pablo",
+    "email": "pablo@gmail.com",
+    "pass": "$2a$10$HZs7ozq5w7cs/myN5.RUjeeMW5117jTYcXzV2QAxUMdWh/dCVnrS.",
+    "rol": "user",
+    "avatar": "avatar_default.png"
+  }
+]
